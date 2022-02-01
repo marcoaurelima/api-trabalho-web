@@ -11,7 +11,7 @@ const getListaAll = require('./routes/lista/getList')
 app.post('/login', login)
 
 app.get('/', (req, res) => {
-  return res.status(200).json({cadeira: 'Programação web'})
+  return res.status(200).json({cadeira: 'Programação web: equipe - Marco, Vinicus e Nathan'})
 })
 
 app.get('/list', getListaAll)
