@@ -1,23 +1,19 @@
 const Sequelize = require('sequelize')
 const database = require('../db')
 
-const Lista = database.define('lista', {
+const Lists = database.define('lists', {
   id:{
       type: Sequelize.INTEGER,
       primaryKey: true,
       autoIncrement: true,
       alowNull: false
   },
-  product_name: {
-    type: Sequelize.STRING,
-    alowNull: false
+  id_user:{
+      type: Sequelize.INTEGER,
+      alowNull: false
   },
-  price: {
-    type: Sequelize.STRING,
-    alowNull: false
-  },
-  qtd: {
-    type: Sequelize.STRING,
+  id_item: {
+    type: Sequelize.INTEGER,
     alowNull: false
   }
 },
@@ -25,4 +21,4 @@ const Lista = database.define('lista', {
   freezeTableName: true
 })
 
-module.exports = Lista
+module.exports = Lists

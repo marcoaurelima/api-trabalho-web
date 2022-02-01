@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize')
 const database = require('../db')
 
-const User = database.define('user', {
+const Users = database.define('users', {
   id:{
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -25,4 +25,4 @@ const User = database.define('user', {
   freezeTableName: true
 })
 
-module.exports = User
+module.exports = Users
