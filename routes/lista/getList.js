@@ -1,9 +1,9 @@
-const users = require('../../database/models/lists')
+const lists = require('../../database/models/lists')
 
 const getListaAll = async (req, res) => {
   const {id_user} = req.body
   try {
-    const response = await users.findAll({
+    const response = await lists.findAll({
       where: {
         id_user
       }
