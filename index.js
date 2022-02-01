@@ -4,9 +4,7 @@ const express = require('express')
 const app = express()
 app.use(express.json())
 
-console.log(process.env.DATABASE_PASSWORD)
-
-const getListaAll = require('./routes/lista/getListaAll')
+const getListaAll = require('./routes/lista/getList')
 
 app.get('/', (req, res) => {
   return res.status(200).json({message: 'tudo funcionando! 1822'})
