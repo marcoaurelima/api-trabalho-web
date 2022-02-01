@@ -11,7 +11,7 @@ const getListaAll = require('./routes/lista/getList')
 app.post('/login', login)
 
 app.get('/', (req, res) => {
-  return res.status(200).json({message: 'tudo funcionando! 1822'})
+  return res.status(200).json({cadeira: 'Programação web'})
 })
 
 app.get('/list', getListaAll)
