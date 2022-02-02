@@ -11,15 +11,15 @@ const login = async (req, res) => {
     })
 
     if(response.length === 0){
-      res.status(403).json({auth: false, message: 'Usuário ou senha inválidos.'})
+      res.json({auth: false, message: 'Usuário ou senha inválidos.'})
       return
     }
 
     const id_user =  response[0].dataValues.id
-    res.status(200).json({auth: true, id_user})
+    res.json({auth: true, id_user})
 
   } catch(e){
-    res.status(403).json(e)
+    res.json(e)
   }
 }
 
