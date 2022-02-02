@@ -3,9 +3,6 @@ const users = require('../../database/models/users')
 const logon = async (req, res) => {
   const {name, email, password} = req.body
 
-    console.log(name)
-      console.log(email)
-        console.log(password)
   try{
     users.create({
       name,
@@ -13,7 +10,7 @@ const logon = async (req, res) => {
       password
     })
 
-    res.status(201).json({message: 'Usuário cadastrado com suceso!'})
+    res.status(201).json({message: 'Usuário cadastrado com sucesso!'})
 
   } catch(e){
     res.status(204).json(e)
