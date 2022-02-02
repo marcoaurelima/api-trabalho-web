@@ -1,10 +1,14 @@
 require('dotenv-safe').config()
 
-var cors = require('cors')
 const express = require('express')
 const app = express()
-app.use(express.json())
-app.use(cors({origin: '*'}))
+
+var cors = require('cors');
+app.use(cors({origin: "*"}));
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
 
 const login = require('./routes/users/login')
 const logon = require('./routes/users/logon')
