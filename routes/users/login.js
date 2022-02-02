@@ -1,8 +1,9 @@
 const users = require('../../database/models/users')
 
 const login = async (req, res) => {
+  console.log("req.body", req.body)
   const {email, password} = req.body
-  try{
+
     const response = await users.findAll({
       where: {
         email,
@@ -18,9 +19,6 @@ const login = async (req, res) => {
     const id_user =  response[0].dataValues.id
     res.status(200).json({auth: true, id_user})
 
-  } catch(e){
-    res.status(403).json(e)
-  }
 }
 
 module.exports = login
