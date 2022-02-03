@@ -17,6 +17,7 @@ const logon = require('./routes/users/logon')
 const getListAll = require('./routes/list-item/get-listItems')
 const deleteItems = require('./routes/list-item/delete-items')
 const createItem = require('./routes/list-item/create-item')
+const updateItem = require('./routes/list-item/update-item')
 
 app.get('/', (req, res) => {
   return res.status(200).json({equipe: 'Programação web: equipe - Marco, Vinicus e Nathan - cors(1)'})
@@ -27,6 +28,7 @@ app.post('/logon', logon)
 app.get('/list', getListAll)
 app.delete('/delete', deleteItems)
 app.post('/add', createItem)
+app.put('/update', updateItem)
 
 
 app.listen(process.env.PORT || 3001)

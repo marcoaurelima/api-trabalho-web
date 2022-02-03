@@ -1,10 +1,10 @@
 const ListItem = require('../../database/models/list_item')
 
-const deleteItems = (req, res) => {
+const deleteItems = async (req, res) => {
   const {id_items} = req.body
   try{
-    id_items.map((id)=>{
-      const item = ListItem.destroy({ where: {id} })
+    id_items.map(async (id)=>{
+      const item = await ListItem.destroy({ where: {id} })
     })
     res.json({status: "ok", message: "Ítens deletados com sucesso!"})
   }catch(e){
