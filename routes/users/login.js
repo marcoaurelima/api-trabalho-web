@@ -2,6 +2,7 @@ const users = require('../../database/models/users')
 
 const login = async (req, res) => {
   const {email, password} = req.body
+
   try{
     const response = await users.findAll({
       where: {

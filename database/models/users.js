@@ -25,5 +25,4 @@ const Users = database.define('users', {
   freezeTableName: true
 })
 
-
 module.exports = Users
