@@ -6,7 +6,7 @@ const deleteItems = (req, res) => {
     id_items.map((id)=>{
       const item = ListItem.destroy({ where: {id} })
     })
-    res.json({status: "ok", message: "Ítens deletado com sucesso!"})
+    res.json({status: "ok", message: "Ítens deletados com sucesso!"})
   }catch(e){
     res.json({status: "error", message: "Não foi possível deletar os ítens."})
   }
