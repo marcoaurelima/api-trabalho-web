@@ -14,7 +14,8 @@ app.use(function(req, res, next) {
 
 const login = require('./routes/users/login')
 const logon = require('./routes/users/logon')
-const getListAll = require('./routes/list-item/getListItems')
+const getListAll = require('./routes/list-item/get-listItems')
+const deleteItems = require('./routes/list-item/delete-items')
 
 app.get('/', (req, res) => {
   return res.status(200).json({equipe: 'Programação web: equipe - Marco, Vinicus e Nathan - cors(1)'})
@@ -23,6 +24,7 @@ app.get('/', (req, res) => {
 app.post('/login', login)
 app.post('/logon', logon)
 app.get('/list', getListAll)
+app.delete('/delete', deleteItems)
 
 
 app.listen(process.env.PORT || 3001)
