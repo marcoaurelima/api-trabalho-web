@@ -10,10 +10,10 @@ const logon = async (req, res) => {
       password
     })
 
-    res.status.json({status: 'ok', message: 'Usuário cadastrado com sucesso!'})
+    res.json({status: 'ok', message: 'Usuário cadastrado com sucesso!'})
 
   } catch(e){
-    res.status.json({status: 'error', e})
+    res.json({status: 'error', e})
   }
 
 }
