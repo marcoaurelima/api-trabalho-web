@@ -8,7 +8,7 @@ const deleteItems = async (req, res) => {
       await ListItem.destroy({ where: {id} })
     })
     res.json({status: "ok", message: "Ítens deletados com sucesso!"})
-    
+
   }catch(e){
     res.json({status: "error", message: "Não foi possível deletar os ítens."})
   }
