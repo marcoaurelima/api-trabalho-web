@@ -24,7 +24,7 @@ app.get('/', info)
 
 app.post  ('/logon',  logon)
 app.post  ('/login',  login)
-app.get   ('/list',   getListAll)
+app.get   ('/list/:id',   getListAll)
 app.post  ('/add',    createItem)
 app.put   ('/update', updateItem)
 app.delete('/delete', deleteItems)
