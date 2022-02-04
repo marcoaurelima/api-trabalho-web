@@ -3,9 +3,6 @@ const ListItem = require('../../database/models/list_item')
 const deleteItems = async (req, res) => {
   const {id_items} = req.body
 
-  res.json({'aurelio': id_items})
-  /*
-
   try{
     id_items.map(async (id)=>{
       await ListItem.destroy({ where: {id} })
@@ -15,7 +12,6 @@ const deleteItems = async (req, res) => {
   }catch(e){
     res.json({status: "error", message: "Não foi possível deletar os ítens."})
   }
-  */
 }
 
 module.exports = deleteItems
