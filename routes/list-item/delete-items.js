@@ -3,7 +3,7 @@ const ListItem = require('../../database/models/list_item')
 const deleteItems = async (req, res) => {
   const {id_items} = req.body
 
-  return res.json({servidor: id_items})
+  res.json({'req.body': req.body})
   /*
 
   try{
