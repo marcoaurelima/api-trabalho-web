@@ -1,9 +1,9 @@
 const ListItem = require('../../database/models/list_item')
 
 const getListaAll = async (req, res) => {
-  const {id_user} = req.query.id
+  const {id_user} = req.params.id
 
-  console.log("body: ", req.query.id)
+  console.log("body: ", req.params.id)
 
   try{
     const response = await ListItem.findAll({
